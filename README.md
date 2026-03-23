@@ -35,16 +35,16 @@ Every crop in Lightyear Frontier reacts differently depending on which soil type
 
 ## Soil × Crop Matrix
 
-| Crop | Type | Normal | High Yield ✦ | Mutated ✦✦ |
-|---|---|---|---|---|
-| Gumberry | Potassic | Potassic | Nitrogenic | Phosphoric |
-| Carrozel | Potassic | Potassic | Nitrogenic | Phosphoric |
-| Honey Flask | Potassic | Potassic | Nitrogenic | Phosphoric |
-| Glowbloom | Phosphoric | Phosphoric | Potassic | Nitrogenic |
-| Rawhead | Phosphoric | Phosphoric | Potassic | Nitrogenic |
-| Chromaize | Nitrogenic | Nitrogenic | Phosphoric | Potassic |
-| Wheat | Nitrogenic | Nitrogenic | Phosphoric | Potassic |
-| Zappling | Nitrogenic | Nitrogenic | Phosphoric | Potassic |
+| Crop        | Type | Normal | High Yield ✦ | Mutated ✦✦ |
+|-------------|---|---|---|---|
+| Polyberry   | Potassic | Potassic | Nitrogenic | Phosphoric |
+| Caroot      | Potassic | Potassic | Nitrogenic | Phosphoric |
+| Honeybottle | Potassic | Potassic | Nitrogenic | Phosphoric |
+| Lumbloom    | Phosphoric | Phosphoric | Potassic | Nitrogenic |
+| Rabbage     | Phosphoric | Phosphoric | Potassic | Nitrogenic |
+| Chromaize   | Nitrogenic | Nitrogenic | Phosphoric | Potassic |
+| Wheat       | Nitrogenic | Nitrogenic | Phosphoric | Potassic |
+| Zappertwig  | Nitrogenic | Nitrogenic | Phosphoric | Potassic |
 
 > **Mutated plants** yield 3 seeds from the Seed Extractor instead of 2, but cannot be processed into oil.
 
