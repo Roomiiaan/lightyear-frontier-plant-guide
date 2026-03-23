@@ -42,14 +42,14 @@ Every crop in Lightyear Frontier reacts differently depending on which soil type
 
 | Crop | Type | Normal | High Yield ✦ | Mutated ✦✦ |
 |---|---|---|---|---|
-| Gummibeere | Potassic | Potassic | Nitrogenic | Phosphoric |
-| Möhrzel | Potassic | Potassic | Nitrogenic | Phosphoric |
-| Honigflasche | Potassic | Potassic | Nitrogenic | Phosphoric |
-| Leuchtblüte | Phosphoric | Phosphoric | Potassic | Nitrogenic |
-| Rohlkopf | Phosphoric | Phosphoric | Potassic | Nitrogenic |
-| Chromais | Nitrogenic | Nitrogenic | Phosphoric | Potassic |
-| Weizen | Nitrogenic | Nitrogenic | Phosphoric | Potassic |
-| Zapperzweig | Nitrogenic | Nitrogenic | Phosphoric | Potassic |
+| Gumberry | Potassic | Potassic | Nitrogenic | Phosphoric |
+| Carrozel | Potassic | Potassic | Nitrogenic | Phosphoric |
+| Honey Flask | Potassic | Potassic | Nitrogenic | Phosphoric |
+| Glowbloom | Phosphoric | Phosphoric | Potassic | Nitrogenic |
+| Rawhead | Phosphoric | Phosphoric | Potassic | Nitrogenic |
+| Chromaize | Nitrogenic | Nitrogenic | Phosphoric | Potassic |
+| Wheat | Nitrogenic | Nitrogenic | Phosphoric | Potassic |
+| Zappling | Nitrogenic | Nitrogenic | Phosphoric | Potassic |
 
 > **Mutated plants** yield 3 seeds from the Seed Extractor instead of 2, but cannot be processed into oil.
 
