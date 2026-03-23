@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lightyear Frontier – Pflanzen & Boden Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<button class="lang-toggle" id="langBtn">EN</button>
+
+<div class="wrapper">
+
+  <header>
+    <div class="game-title" data-i18n="game-title">⚙ Exofarmer Feldhandbuch ⚙</div>
+    <h1 data-i18n="h1">Pflanzen & Boden Guide</h1>
+    <p class="subtitle" data-i18n="subtitle">Welcher Boden erzeugt normalen Ertrag, hohen Ertrag oder Mutationen? Alle Pflanzen auf einen Blick.</p>
+  </header>
+
+  <!-- Filter -->
+  <div class="filter-bar">
+    <button class="filter-btn all active" data-i18n="filter-all">Alle Pflanzen</button>
+    <button class="filter-btn nitro" data-i18n="filter-nitro">🟢 Nitrogenisch</button>
+    <button class="filter-btn phos" data-i18n="filter-phos">🔵 Phosphorisch</button>
+    <button class="filter-btn potas" data-i18n="filter-potas">🟠 Kaliumhaltig</button>
+  </div>
+
+  <!-- Soil legend -->
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot" style="background:var(--nitro);box-shadow:0 0 5px var(--nitro)"></div><span data-i18n="legend-nitro">Nitrogenisch (Stickstoff)</span></div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--phos);box-shadow:0 0 5px var(--phos)"></div><span data-i18n="legend-phos">Phosphorisch</span></div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--potas);box-shadow:0 0 5px var(--potas)"></div><span data-i18n="legend-potas">Kaliumhaltig</span></div>
+  </div>
+
+  <!-- Result legend -->
+  <div class="result-legend">
+    <div class="result-badge-legend"><span class="rb normal">Normal</span><span data-i18n="result-normal-desc">Gleicher Bodentyp → 1× Ertrag</span></div>
+    <div class="result-badge-legend"><span class="rb high">Hoher Ertrag ✦</span><span data-i18n="result-high-desc">Bestimmter Bodentyp → 2× Ertrag</span></div>
+    <div class="result-badge-legend"><span class="rb mutated">Mutiert ✦✦</span><span data-i18n="result-mutated-desc">Bestimmter Bodentyp → Mutierte Pflanze + 3 Samen</span></div>
+  </div>
+
+  <!-- Plant cards -->
+  <div class="grid" id="grid">
+
+    <!-- POTASSIC crops -->
+    <div class="card potas" data-type="potas" style="animation-delay:0.05s">
+      <div class="card-header">
+        <div class="crop-icon">🫐</div>
+        <div>
+          <div class="crop-name" data-i18n="crop-gumberry">Gummibeere</div>
+          <span class="crop-type-badge" data-i18n="badge-potas">Kaliumhaltig</span>
+        </div>
+      </div>
+      <div class="soil-rows">
+        <div class="soil-row">
+          <div class="soil-color potas"></div>
+          <div class="soil-name" data-i18n="soil-potas">Kaliumhaltiger Boden</div>
+          <span class="result-badge normal" data-i18n="badge-normal">Normal</span>
+        </div>
+        <div class="soil-row">
+          <div class="soil-color nitro"></div>
+          <div class="soil-name" data-i18n="soil-nitro">Nitrogenischer Boden</div>
+          <span class="result-badge high" data-i18n="badge-high">Hoher Ertrag ✦</span>
+        </div>
+        <div class="soil-row">
+          <div class="soil-color phos"></div>
+          <div class="soil-name" data-i18n="soil-phos">Phosphorischer Boden</div>
+          <span class="result-badge mutated" data-i18n="badge-mutated">Mutiert ✦✦</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card potas" data-type="potas" style="animation-delay:0.1s">
+      <div class="card-header">
+        <div class="crop-icon">🥕</div>
+        <div>
+          <div class="crop-name" data-i18n="crop-carrozel">Möhrzel</div>
+          <span class="crop-type-badge" data-i18n="badge-potas">Kaliumhaltig</span>
+        </div>
+      </div>
+      <div class="soil-rows">
+        <div class="soil-row">
+          <div class="soil-color potas"></div>
+          <div class="soil-name" data-i18n="soil-potas">Kaliumhaltiger Boden</div>
+          <span class="result-badge normal" data-i18n="badge-normal">Normal</span>
+        </div>
+        <div class="soil-row">
+          <div class="soil-color nitro"></div>
+          <div class="soil-name" data-i18n="soil-nitro">Nitrogenischer Boden</div>
+          <span class="result-badge high" data-i18n="badge-high">Hoher Ertrag ✦</span>
+        </div>
+        <div class="soil-row">
+          <div class="soil-color phos"></div>
+          <div class="soil-name" data-i18n="soil-phos">Phosphorischer Boden</div>
+          <span class="result-badge mutated" data-i18n="badge-mutated">Mutiert ✦✦</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card potas" data-type="potas" style="animation-delay:0.15s">
+      <div class="card-header">
+        <div class="crop-icon">🍯</div>
+        <div>
+          <div class="crop-name" data-i18n="crop-honeyflask">Honigflasche</div>
+          <span class="crop-type-badge" data-i18n="badge-potas">Kaliumhaltig</span>
+        </div>
+      </div>
+      <div class="soil-rows">
+        <div class="soil-row">
+          <div class="soil-color potas"></div>
+          <div class="soil-name" data-i18n="soil-potas">Kaliumhaltiger Boden</div>
+          <span class="result-badge normal" data-i18n="badge-normal">Normal</span>
+        </div>
+        <div class="soil-row">
+          <div class="soil-color nitro"></div>
+          <div class="soil-name" data-i18n="soil-nitro">Nitrogenischer Boden</div>
+          <span class="result-badge high" data-i18n="badge-high">Hoher Ertrag ✦</span>
+        </div>
+        <div class="soil-row">
+          <div class="soil-color phos"></div>
+          <div class="soil-name" data-i18n="soil-phos">Phosphorischer Boden</div>
+          <span class="result-badge mutated" data-i18n="badge-mutated">Mutiert ✦✦</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHOSPHORIC crops -->
+    <div class="card phos" data-type="phos" style="animation-delay:0.2s">
+      <div class="card-header">
+        <div class="crop-icon">💡</div>
+        <div>
+          <div class="crop-name" data-i18n="crop-glowbloom">Leuchtblüte</div>
+          <span class="crop-type-badge" data-i18n="badge-phos">Phosphorisch</span>
+        </div>
+      </div>
+      <div class="soil-rows">
+        <div class="soil-row">
+          <div class="soil-color phos"></div>
+          <div class="soil-name" data-i18n="soil-phos">Phosphorischer Boden</div>
+          <span class="result-badge normal" data-i18n="badge-normal">Normal</span>
+        </div>
+        <div class="soil-row">
+          <div class="soil-color potas"></div>
+          <div class="soil-name" data-i18n="soil-potas">Kaliumhaltiger Boden</div>
+          <span class="result-badge high" data-i18n="badge-high">Hoher Ertrag ✦</span>
+        </div>
+        <div class="soil-row">
+          <div class="soil-color nitro"></div>
+          <div class="soil-name" data-i18n="soil-nitro">Nitrogenischer Boden</div>
+          <span class="result-badge mutated" data-i18n="badge-mutated">Mutiert ✦✦</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card phos" data-type="phos" style="animation-delay:0.25s">
+      <div class="card-header">
+        <div class="crop-icon">🥬</div>
+        <div>
+          <div class="crop-name" data-i18n="crop-rawhead">Rohlkopf</div>
+          <span class="crop-type-badge" data-i18n="badge-phos">Phosphorisch</span>
+        </div>
+      </div>
+      <div class="soil-rows">
+        <div class="soil-row">
+          <div class="soil-color phos"></div>
+          <div class="soil-name" data-i18n="soil-phos">Phosphorischer Boden</div>
+          <span class="result-badge normal" data-i18n="badge-normal">Normal</span>
+        </div>
+        <div class="soil-row">
+          <div class="soil-color potas"></div>
+          <div class="soil-name" data-i18n="soil-potas">Kaliumhaltiger Boden</div>
+          <span class="result-badge high" data-i18n="badge-high">Hoher Ertrag ✦</span>
+        </div>
+        <div class="soil-row">
+          <div class="soil-color nitro"></div>
+          <div class="soil-name" data-i18n="soil-nitro">Nitrogenischer Boden</div>
+          <span class="result-badge mutated" data-i18n="badge-mutated">Mutiert ✦✦</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- NITROGENIC crops -->
+    <div class="card nitro" data-type="nitro" style="animation-delay:0.3s">
+      <div class="card-header">
+        <div class="crop-icon">🌀</div>
+        <div>
+          <div class="crop-name" data-i18n="crop-chromais">Chromais</div>
+          <span class="crop-type-badge" data-i18n="badge-nitro">Nitrogenisch</span>
+        </div>
+      </div>
+      <div class="soil-rows">
+        <div class="soil-row">
+          <div class="soil-color nitro"></div>
+          <div class="soil-name" data-i18n="soil-nitro">Nitrogenischer Boden</div>
+          <span class="result-badge normal" data-i18n="badge-normal">Normal</span>
+        </div>
+        <div class="soil-row">
+          <div class="soil-color phos"></div>
+          <div class="soil-name" data-i18n="soil-phos">Phosphorischer Boden</div>
+          <span class="result-badge high" data-i18n="badge-high">Hoher Ertrag ✦</span>
+        </div>
+        <div class="soil-row">
+          <div class="soil-color potas"></div>
+          <div class="soil-name" data-i18n="soil-potas">Kaliumhaltiger Boden</div>
+          <span class="result-badge mutated" data-i18n="badge-mutated">Mutiert ✦✦</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card nitro" data-type="nitro" style="animation-delay:0.35s">
+      <div class="card-header">
+        <div class="crop-icon">🌾</div>
+        <div>
+          <div class="crop-name" data-i18n="crop-wheat">Weizen</div>
+          <span class="crop-type-badge" data-i18n="badge-nitro">Nitrogenisch</span>
+        </div>
+      </div>
+      <div class="soil-rows">
+        <div class="soil-row">
+          <div class="soil-color nitro"></div>
+          <div class="soil-name" data-i18n="soil-nitro">Nitrogenischer Boden</div>
+          <span class="result-badge normal" data-i18n="badge-normal">Normal</span>
+        </div>
+        <div class="soil-row">
+          <div class="soil-color phos"></div>
+          <div class="soil-name" data-i18n="soil-phos">Phosphorischer Boden</div>
+          <span class="result-badge high" data-i18n="badge-high">Hoher Ertrag ✦</span>
+        </div>
+        <div class="soil-row">
+          <div class="soil-color potas"></div>
+          <div class="soil-name" data-i18n="soil-potas">Kaliumhaltiger Boden</div>
+          <span class="result-badge mutated" data-i18n="badge-mutated">Mutiert ✦✦</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card nitro" data-type="nitro" style="animation-delay:0.4s">
+      <div class="card-header">
+        <div class="crop-icon">⚡</div>
+        <div>
+          <div class="crop-name" data-i18n="crop-zappling">Zapperzweig</div>
+          <span class="crop-type-badge" data-i18n="badge-nitro">Nitrogenisch</span>
+        </div>
+      </div>
+      <div class="soil-rows">
+        <div class="soil-row">
+          <div class="soil-color nitro"></div>
+          <div class="soil-name" data-i18n="soil-nitro">Nitrogenischer Boden</div>
+          <span class="result-badge normal" data-i18n="badge-normal">Normal</span>
+        </div>
+        <div class="soil-row">
+          <div class="soil-color phos"></div>
+          <div class="soil-name" data-i18n="soil-phos">Phosphorischer Boden</div>
+          <span class="result-badge high" data-i18n="badge-high">Hoher Ertrag ✦</span>
+        </div>
+        <div class="soil-row">
+          <div class="soil-color potas"></div>
+          <div class="soil-name" data-i18n="soil-potas">Kaliumhaltiger Boden</div>
+          <span class="result-badge mutated" data-i18n="badge-mutated">Mutiert ✦✦</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="no-results" id="noResults" data-i18n="no-results">Keine Pflanzen für diesen Filter gefunden.</div>
+
+  <!-- Rotation section -->
+  <div class="rotation-section">
+    <div class="section-title" data-i18n="rotation-title">⟳ Fruchtfolge-Empfehlungen</div>
+    <div class="rotation-cards">
+      <div class="rotation-card mutation">
+        <div class="rotation-label" data-i18n="rotation-mutation-label">✦✦ Für Mutationen (mehr Samen)</div>
+        <div class="rotation-flow">
+          <span class="rot-node nitro" data-i18n="rot-nitro">Nitro</span>
+          <span class="rot-arrow">→</span>
+          <span class="rot-node phos" data-i18n="rot-phos">Phosphor</span>
+          <span class="rot-arrow">→</span>
+          <span class="rot-node potas" data-i18n="rot-potas">Kalium</span>
+          <span class="rot-arrow">→</span>
+          <span class="rot-node nitro" data-i18n="rot-nitro-loop">Nitro …</span>
+        </div>
+        <div class="rotation-tip" data-i18n-html="rotation-mutation-tip">
+          Mutierte Pflanzen ergeben 3 Samen statt 2 aus dem Samenextractor. Ideal, um deinen Vorrat schnell zu vergrößern.<br>
+          <strong>Achtung:</strong> Mutierte Pflanzen können nicht zu Öl verarbeitet werden.
+        </div>
+      </div>
+      <div class="rotation-card highyield">
+        <div class="rotation-label" data-i18n="rotation-highyield-label">✦ Für Hohen Ertrag (mehr Produkt)</div>
+        <div class="rotation-flow">
+          <span class="rot-node nitro" data-i18n="rot-nitro">Nitro</span>
+          <span class="rot-arrow">→</span>
+          <span class="rot-node potas" data-i18n="rot-potas">Kalium</span>
+          <span class="rot-arrow">→</span>
+          <span class="rot-node phos" data-i18n="rot-phos">Phosphor</span>
+          <span class="rot-arrow">→</span>
+          <span class="rot-node nitro" data-i18n="rot-nitro-loop">Nitro …</span>
+        </div>
+        <div class="rotation-tip" data-i18n-html="rotation-highyield-tip">
+          Hoher Ertrag verdoppelt die geerntete Menge. Für Lieferungen und Rohstoffproduktion optimal.<br>
+          Kombinierbar mit Cozy-Level-4-Bonus und Dünger für noch mehr Ausbeute.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-note" data-i18n="footer">Daten basieren auf Community-Guides & Lightyear Frontier Wiki • Stand: 2025</div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
