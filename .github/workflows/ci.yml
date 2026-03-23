@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    name: Validate
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate JSON locale files
+        run: |
+          for f in locales/*.json; do
+            echo "Checking $f ..."
+            node -e "
+              const fs = require('fs');
+              try {
+                JSON.parse(fs.readFileSync('$f', 'utf8'));
+                console.log('✓ $f');
+              } catch (e) {
+                console.error('✗ $f:', e.message);
+                process.exit(1);
+              }
+            "
+          done
+
+      - name: Check JavaScript syntax
+        run: node --check app.js && echo "✓ app.js"
+
+      - name: Lint HTML
+        run: npx --yes htmlhint index.html
