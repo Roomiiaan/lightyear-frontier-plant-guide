@@ -1,10 +1,5 @@
 <div align="center">
 
-<img src="https://lightyearfrontier.com/wp-content/uploads/2023/12/Banner_Image.webp" alt="Lightyear Frontier" width="100%">
-
-<br/>
-<br/>
-
 <img src="https://lightyearfrontier.com/wp-content/uploads/2022/06/GameLogo.png" alt="Lightyear Frontier Logo" width="340">
 
 # Plant & Soil Guide
