@@ -1,6 +1,6 @@
 class LanguageManager {
   #cache   = {};
-  #current = 'de';
+  #current = 'en';
 
   async load(lang) {
     if (!this.#cache[lang]) {
